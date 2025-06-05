@@ -14,6 +14,12 @@ steps:
   inputs:
     SonarQube: 'javaapp'
     scannerMode: 'other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=pipelines-java
+      sonar.projectName=pipelines-java
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
