@@ -13,7 +13,7 @@ steps:
 - task: SonarQubePrepare@7
   inputs:
     SonarQube: 'javaapp'
-    scannerMode: 'other'
+    scannerMode: 'CLI'
     extraProperties: |
       # Additional properties that will be passed to the scanner,
       # Put one key=value per line, example:
